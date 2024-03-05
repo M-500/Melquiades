@@ -33,11 +33,12 @@ type routeTree struct {
 //
 //	@Description: 注册路由到路由森林，不能以 / 结尾，不能包含连续的/,必须以/开头
 //	@receiver r
-//	@param method
-//	@param path
-//	@param hal
+//	@param method  HTTP请求方法
+//	@param path	 请求的URL
+//	@param hal   请求方法
 func (r routerForest) regRouter(method, path string, hal HandlerFn) {
 	if path == "" || len(path) == 0 {
 		panic("web: 无法注册不合法的路由")
 	}
+	// 查看这棵树是否存在
 }
